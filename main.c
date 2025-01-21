@@ -30,17 +30,17 @@ int load_program(const char *filename, uint16_t *memory) {
   uint16_t instruction;
 
   while (fread(&instruction, sizeof(uint16_t), 1, file) == 1) {
+    if (current_addr >= 0xffff) {
+      printf("Program is too big\n");
+      fclose(file);
+      return -1;
+    }
     // Convert each instruction from big-endian
     instruction = (instruction >> 8) | (instruction << 8);
     memory[current_addr] = instruction;
     printf("Loaded 0x%04X at address 0x%04X\n", instruction, current_addr);
-    current_addr++;
 
-    if (current_addr >= 0x10000) {
-      printf("program is too big\n");
-      fclpse(file);
-      return -1
-    }
+    current_addr++;
   }
 
   fclose(file);
