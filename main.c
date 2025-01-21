@@ -35,6 +35,12 @@ int load_program(const char *filename, uint16_t *memory) {
     memory[current_addr] = instruction;
     printf("Loaded 0x%04X at address 0x%04X\n", instruction, current_addr);
     current_addr++;
+
+    if (current_addr >= 0x10000) {
+      printf("program is too big\n");
+      fclpse(file);
+      return -1
+    }
   }
 
   fclose(file);
