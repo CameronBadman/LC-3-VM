@@ -1,6 +1,6 @@
 # LC-3 Virtual Machine in C
 
-A simple implementation of an LC-3 virtual machine written in C. The LC-3 is a 16-bit educational computer architecture, and this project emulates its instruction set, memory, and registers.
+A implementation of LC-3 virtual machine written in C. The LC-3 is a 16-bit educational computer architecture, and this project emulates its instruction set, memory, and registers.
 
 ## Features
 
