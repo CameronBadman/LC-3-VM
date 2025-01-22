@@ -7,5 +7,3 @@ A simple implementation of an LC-3 virtual machine written in C. The LC-3 is a 1
 - Full emulation of the LC-3 instruction set.
 - Supports loading and executing LC-3 object files (`.obj`).
 - Basic terminal-based I/O for interaction.
-
-## Build and Run
