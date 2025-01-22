@@ -8,3 +8,5 @@ A implementation of the LC-3 virtual machine written in C. The LC-3 is a 16-bit 
 - Supports loading and executing LC-3 object files (`.obj`).
 - Basic terminal-based I/O for interaction.
 
+it is based in the vm in https://www.jmeiners.com/lc3-vm/ but is heavily modified to make it more robust
+
